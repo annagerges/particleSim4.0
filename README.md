@@ -26,6 +26,7 @@ a = -g = -9.8 m/s²
 ```
 
 **Spring Force (when y ≤ spring height)**:
+I wanted to  experiment with repulsive forces to keep the simulation lively.
 
 ```
 F_spring = k(y - h)
@@ -42,6 +43,7 @@ Factor of 4 increases springiness and creates a responsive force.
 ### Numerical Integration
 
 **RK4 (Runge-Kutta 4th Order)** with fixed timestep `dt = 0.1 s`. Computes four slope estimates (k1–k4) and combines them with weights (1:2:2:1) to approximate the solution:
+Though RK4 take more computational power that Euler, it is magnitudes more accurate over time.
 
 ```cpp
 		// Determine if particle is on spring once at start of step
